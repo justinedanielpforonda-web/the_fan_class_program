@@ -56,3 +56,18 @@ class Fan:
         }
 
         return speed_names[self.__speed]
+
+    # =====================
+    # Display Method
+    # =====================
+
+    def display_info(self):
+
+        print("=" * 35)
+        print(("FAN INFORMATION").center(35))
+        print("=" * 35)
+        print(f"Speed  : {self.get_speed_name()}")
+        print(f"Radius : {self.__radius}")
+        print(f"Color  : {self.__color}")
+        print(f"Status : {'ON' if self.__on else 'OFF'}")
+        print("=" * 35)
