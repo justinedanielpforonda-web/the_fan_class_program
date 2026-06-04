@@ -43,4 +43,16 @@ class Fan:
     def set__color(self, color):
         self.__color = color
 
-fan1 = Fan(speed = Fan.FAST, on = True, radius = 10, color = "yellow")
+    # =====================
+    # Helper Methods
+    # =====================
+
+    def get_speed_name(self):
+
+        speed_names = {
+            Fan.SLOW: "SLOW",
+            Fan.MEDIUM: "MEDIUM",
+            Fan.FAST: "FAST"
+        }
+
+        return speed_names[self.__speed]
